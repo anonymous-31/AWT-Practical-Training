@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <style>
+        #MyDiv,#MyHomeDiv,#MyHorizontalDiv,#MyVerticalDiv,#MyThreeSecondsDelayDiv,#MyTwoHundredPixelDiv{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background: gray;
+            color: #ffffff;
+            font-size: large;
+            font-weight: bold;
+        }
+        #MyTwoHundredPixelDiv{
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            background: gray;
+            color: #ffffff;
+            font-size: large;
+            font-weight: bold;
+        }
+        #MyDiv,#MyHomeDiv,#MyHorizontalDiv,#MyVerticalDiv,#MyThreeSecondsDelayDiv,#MyTwoHundredPixelDiv{
+            border: solid 3px #000000;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#MyDiv").draggable();
+
+            $("#MyHomeDiv span").draggable({
+                containment:"MyHomeDiv"
+            });
+
+            $("#MyHorizontalDiv span").draggable({
+                axis:"x"
+            });
+
+            $("#MyVerticalDiv span").draggable({
+                axis:"y"
+            });
+
+            $("#MyThreeSecondsDelayDiv").draggable({
+                delay:3000
+            });
+
+            $("#MyTwoHundredPixelDiv").draggable({
+                distance:200
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="MyDiv">
+        <p>Hello Students...</p>
+    </div><hr>
+    <div id="MyHomeDiv">
+            <span>This is my Home and I can Move within it only....</span>
+    </div><hr>
+    <div id="MyHorizontalDiv">
+        <span>I can Move only Horizontally..</span>
+    </div><hr>
+    <div id="MyVerticalDiv">
+        <span>I can move only vertically...</span>
+    </div><hr>
+    <div id="MyThreeSecondsDelayDiv">
+        <span>I can move after only 3 seconds..</span>
+    </div><hr>
+    <div id="MyTwoHundredPixelDiv">
+        <span>I can Move only after 200px...</span>
+    </div><hr>
+</body>
+</html>

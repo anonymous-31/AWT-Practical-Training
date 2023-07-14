@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do while Loop</title>
+</head>
+<body>
+    <h2>Javascript do while loop</h2>
+    <p id="demo"></p>
+    <script>
+        /*let x=1;
+        while(x<10){
+            document.getElementById("demo").innerHTML="the number is "+x;
+            x++;
+        }*/
+        let text="";
+        let i=10;
+        do{
+            text+="<br>The Number is "+i;
+            i++;
+        }
+        while(i<=20);
+        document.getElementById("demo").innerHTML=text;
+        </script>
+</body>
+</html>

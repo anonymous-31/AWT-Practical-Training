@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <style>
+        #mainul li ul li{display: none;}
+        #mainul li:hover ul li{display: block;}
+        #mainul li:hover ul li ul li{display: none;}
+        #mainul li ul li:hover ul li{display: block;} 
+        #mainul li ul li:hover ul li ul li{display: none;}
+        #mainul li ul li ul li:hover ul li{display: block;}
+    </style>
+</head>
+<body>
+    <ul id="mainul">
+        <li>Google
+            <ul>
+                <li>Gmail
+                    <ul>
+                        <li>Sign Up</li>
+                        <li>Sign In
+                            <ul>
+                                <li>Sign In as Admin</li>
+                                <li>Sign In as Member</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Youtube</li>
+                <li>Gdrive</li>
+                <li>Gmap</li>
+            </ul>
+        </li>
+        <li>Facebook
+            <ul>
+                <li>Sign In</li>
+                <li>Login</li>
+            </ul>
+        </li>
+        <li>Microsoft
+            <ul>
+                <li>Bing</li>
+                <li>LinkedIN</li>
+            </ul>
+        </li>
+        <li>MSN</li>
+        <li>Amazon
+            <ul>
+                <li>AWS</li>
+                <li>E-Commerce</li>
+                <li>A-ML</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

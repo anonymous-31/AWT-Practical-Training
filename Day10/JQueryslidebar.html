@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide down</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+
+            $("#flip2").click(function(){
+                $("#panel2").slideUp("slow");
+            });
+
+            $("#flip3").click(function(){
+                $("#panel3").slideDown("slow");
+            });
+        });
+    </script>
+    <style>
+        #flip,#flip2,#flip3,#panel,#panel2,#panel3{
+            padding: 20px;
+            text-align: center;
+            background-color: bisque;
+            border: 1px solid black;
+        }
+        #panel,#panel2,#panel3{
+            padding: 10px;
+            display: none;
+            background-color: aquamarine;
+        }
+        #panel2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">Click to slide Up/down panel</div>
+    <div id="panel">Hello World!</div><hr><br>
+
+    <div id="flip2">Click to slide Up panel</div>
+    <div id="panel2">Hello World!</div><hr><br>
+
+    <div id="flip3">Click to slide down panel</div>
+    <div id="panel3">Hello World!</div><hr><br>
+</body>
+</html>

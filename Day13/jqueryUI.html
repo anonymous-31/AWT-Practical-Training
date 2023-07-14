@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery UI</title>
+    <link rel="stylesheet" href="HTTPS://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #MyAccordion {
+            font-size: 14px;
+            width: 50%;
+        }
+        
+        #MyAccordion div {
+            background: #ffffff;
+        }
+        </style>
+</head>
+
+<body>
+    <div id="MyAccordion">
+        <h3>Tab 1</h3>
+        <div>
+            <p>Paragraph 1</p>
+        </div>
+        <h3>Tab 2</h3>
+        <div>
+            <p>Paragraph 2</p>
+        </div>
+        <h3>Tab 3</h3>
+        <div>
+            <p>Paragraph 3</p>
+        </div>
+        <h3>Tab 4</h3>
+        <div>
+            <p>Paragraph 4</p>
+        </div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#MyAccordion").accordion();
+            });
+        </script>
+</body>
+
+</html>

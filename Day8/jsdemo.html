@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h2>what can javascript do?</h2>
+    <p id="demo">Javascript can change HTML content...</p>
+   <button onclick="document.getElementById('demo').innerHTML='hello javascript'">Click Me!!</button>
+   <hr>
+   <br>
+   <h1>javascript variables</h1>
+   <br><p id="varjs">create a variable,assign a value to it,and display it.</p><br><hr>
+   <button onclick="func()">display</button>
+   <script>
+    let carname="BMW";
+    document.getElementById("varjs").innerHTML=carname;
+
+
+    function func(){
+    let number=1;
+    for(number;number<=10;number++){
+        document.write(number)
+    }}
+   </script>
+</body>
+</html>

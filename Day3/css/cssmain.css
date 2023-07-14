@@ -1,0 +1,12 @@
+#d2{
+    text-align: center;
+    color: black;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(10, 25, 231) !important;
+    margin-top: 2%;
+    width: 500px;
+    padding: 50px;
+    margin-bottom: 2%;
+    border: 3px solid;    
+}

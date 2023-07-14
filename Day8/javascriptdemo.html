@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript demo</title>
+</head>
+<body>
+    <input type="button" onclick="alert('hello i am alert message')" value="alert button inline">&nbsp;
+    <input type="button" onclick="confirm('ARE YOU SURE TO TAKE ADMISSION')" value="confirm button inline">&nbsp;
+    <input type="button" onclick="prompt('enter your name')" value="prompt button inline"><hr><br>
+
+    <input type="button" onclick="alertinternal()" value="alert button internal">&nbsp;
+    <input type="button" onclick="confirminternal()" value="confirm button internal">&nbsp;
+    <input type="button" onclick="promptinternal()" value="prompt button internal"><hr><br>
+
+
+    <input type="button" onclick="green()" value="alert button external" id="b1">&nbsp;
+    <input type="button" onclick="red()" value="confirm button external" id="b2">&nbsp;
+    <input type="button" onclick="blue()" value="prompt button external" id="b3"><hr><br>
+
+
+    <input type="button" onclick="bodybggreen()" value="Body bg green">&nbsp;
+    <input type="button" onclick="divbggray()" value="div bg gray">&nbsp;<br><br>
+    <div id="div1" style="width: 200px; height: 200px;"></div>
+    <hr><br>
+    <input type="button" onclick="bodybggreendynamic()" value="body bg green prompt">&nbsp;
+    <input type="button" onclick="divbggraydynamic()" value="div bg gray prompt">&nbsp;
+
+    <input type="color" onchange="bodybgcp1()" id="cp1">
+    <input type="color" onchange="divbgcp2()" id="cp2">
+    <script src="demo.js"></script>
+    <script>
+        function alertinternal(){
+            alert("hi guys i am internal alert message");
+        }
+        function confirminternal(){
+            confirm("are you sure to want to take admission");
+            if("yes"){
+                alert("success");
+            }else{
+                alert("failure")
+            }
+        }
+        function promptinternal(){
+            let fname=prompt("enter you firstname");
+            let lname=prompt("enter you lastname");
+            document.write(fname+" "+lname);
+        }
+
+        function bodybggreen(){
+            document.body.style.backgroundColor="green";
+        }
+        function divbggray(){
+            document.getElementById("div1").style.backgroundColor="gray";
+        }
+
+       function bodybggreendynamic(){
+            document.body.style.backgroundColor=prompt("enter colour"); 
+       }
+       function divbggraydynamic(){
+        document.getElementById("div1").style.backgroundColor=prompt("enter colour");
+       }
+
+       function bodybgcp1(){
+        document.body.style.backgroundColor=document.getElementById("cp1").value;
+       }
+       function divbgcp2(){
+        document.getElementById("div1").style.backgroundColor=document.getElementById("cp2").value;
+       }
+    </script>
+</body>
+</html>

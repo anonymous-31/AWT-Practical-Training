@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <input type="button" id="bt1" value="Animation 1">
+    <input type="button" id="bt2" value="Animation 2">
+    <input type="button" id="bt3" value="Animation 3"><br><br>
+    <div style="height: 50px; width: 50px; background-color:red; position: absolute;"></div>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $("div").animate({left:'250px'});
+            });
+           $("#bt2").click(function(){
+                $("div").animate({
+                    left:'250px',
+                    opacity:'0.5',
+                    height:'150px',
+                    width:'150px'
+                   
+                })
+           });
+           $("#bt3").click(function(){
+               let div=$("div");
+               div.animate({height:'300px',opacity:'0.4'},"slow");
+               div.animate({width:'300px',opacity:'o.8'},"slow");
+               div.animate({height:'100px',opacity:'o.4'},"slow");
+               div.animate({width:'100px',opacity:'o.8'},"slow");
+           });
+        });
+    </script>
+</body>
+</html>
